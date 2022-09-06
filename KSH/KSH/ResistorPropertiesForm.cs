@@ -22,7 +22,7 @@ namespace KSH
             int resistorIterator = Int32.Parse(txb_resistorCounter.Text);
             SchemaDimension.resistorsN[resistorIterator - 1, 0]     = Int32.Parse(txb_nodeNPlus.Text);
             SchemaDimension.resistorsN[resistorIterator - 1, 1]     = Int32.Parse(txb_nodeNMinus.Text);
-            SchemaDimension.resistorsValue[resistorIterator - 1]    = Int32.Parse(txb_resist.Text);
+            SchemaDimension.resistorsValue[resistorIterator - 1]    = float.Parse(txb_resist.Text);
             ++resistorIterator;
             txb_resistorCounter.Text = resistorIterator.ToString();
 
