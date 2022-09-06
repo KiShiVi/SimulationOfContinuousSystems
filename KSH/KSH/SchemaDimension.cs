@@ -23,5 +23,12 @@ namespace KSH
         public static int id_oper_boosters      = 0;
         public static int id_transformers       = 0;
 
+        public static int[,] resistorsN = new int[resistors, 2];
+        public static int[] resistorsValue = new int[resistors];
+        public static void updateArrays()
+        {
+            resistorsN      = new int[resistors, 2];
+            resistorsValue  = new int[resistors];
+        }   
     }
 }

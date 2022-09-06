@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResistorPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResistorPropertiesForm.Designer.cs">
+      <DependentUpon>ResistorPropertiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchemaDimension.cs" />
     <Compile Include="SchemaDimensionForm.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ResistorPropertiesForm.resx">
+      <DependentUpon>ResistorPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SchemaDimensionForm.resx">
       <DependentUpon>SchemaDimensionForm.cs</DependentUpon>
     </EmbeddedResource>

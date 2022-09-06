@@ -33,7 +33,16 @@ namespace KSH
             SchemaDimension.transformers        = Int32.Parse(txb_transformers      .Text);
             SchemaDimension.id_oper_boosters    = Int32.Parse(txb_id_oper_boosters  .Text);
             SchemaDimension.id_transformers     = Int32.Parse(txb_id_transformers   .Text);
+            SchemaDimension.updateArrays();
             this.Close();
+
+            if (SchemaDimension.resistors > 0)
+            {
+                ResistorPropertiesForm resistorPropertiesForm = new ResistorPropertiesForm();
+                resistorPropertiesForm.ShowDialog(this);
+                resistorPropertiesForm.Dispose();
+            }
+
         }
     }
 }
