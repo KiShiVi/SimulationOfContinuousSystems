@@ -21,5 +21,12 @@ namespace KSH
         {
             this.Close();
         }
+
+        private void ID_CONS_Click(object sender, EventArgs e)
+        {
+            SchemaDimensionForm schemaDimensionForm = new SchemaDimensionForm();
+            schemaDimensionForm.ShowDialog(this);
+            schemaDimensionForm.Dispose();
+        }
     }
 }
