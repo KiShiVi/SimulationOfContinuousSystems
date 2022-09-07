@@ -30,10 +30,10 @@
         {
             this.btn_ok = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txb_nodeNPlus = new System.Windows.Forms.TextBox();
+            this.txb_nodeNMinus = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txb_resist = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_enteringDescription = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,19 +61,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Значение";
             // 
-            // textBox1
+            // txb_nodeNPlus
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txb_nodeNPlus.Location = new System.Drawing.Point(159, 81);
+            this.txb_nodeNPlus.Name = "txb_nodeNPlus";
+            this.txb_nodeNPlus.Size = new System.Drawing.Size(100, 20);
+            this.txb_nodeNPlus.TabIndex = 3;
             // 
-            // textBox2
+            // txb_nodeNMinus
             // 
-            this.textBox2.Location = new System.Drawing.Point(159, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txb_nodeNMinus.Location = new System.Drawing.Point(159, 115);
+            this.txb_nodeNMinus.Name = "txb_nodeNMinus";
+            this.txb_nodeNMinus.Size = new System.Drawing.Size(100, 20);
+            this.txb_nodeNMinus.TabIndex = 5;
             // 
             // label2
             // 
@@ -84,12 +84,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Значение";
             // 
-            // textBox4
+            // txb_resist
             // 
-            this.textBox4.Location = new System.Drawing.Point(159, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txb_resist.Location = new System.Drawing.Point(159, 148);
+            this.txb_resist.Name = "txb_resist";
+            this.txb_resist.Size = new System.Drawing.Size(100, 20);
+            this.txb_resist.TabIndex = 7;
             // 
             // label4
             // 
@@ -174,11 +174,11 @@
             this.Controls.Add(this.btn_descriptionOutput);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btn_enteringDescription);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txb_resist);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txb_nodeNMinus);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txb_nodeNPlus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_ok);
             this.Name = "EditingForm";
@@ -192,10 +192,10 @@
 
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txb_nodeNPlus;
+        private System.Windows.Forms.TextBox txb_nodeNMinus;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txb_resist;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_enteringDescription;
         private System.Windows.Forms.Label label11;
