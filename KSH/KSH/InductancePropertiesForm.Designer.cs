@@ -51,7 +51,7 @@
             // 
             // txb_inductorCounter
             // 
-            this.txb_inductorCounter.Location = new System.Drawing.Point(102, 28);
+            this.txb_inductorCounter.Location = new System.Drawing.Point(120, 28);
             this.txb_inductorCounter.Name = "txb_inductorCounter";
             this.txb_inductorCounter.ReadOnly = true;
             this.txb_inductorCounter.Size = new System.Drawing.Size(100, 20);
@@ -63,9 +63,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Катушка Инд.";
+            this.label1.Text = "Катушка Инд. L";
             // 
             // label2
             // 
@@ -78,7 +78,7 @@
             // 
             // txb_inductorNodeNPlus
             // 
-            this.txb_inductorNodeNPlus.Location = new System.Drawing.Point(102, 57);
+            this.txb_inductorNodeNPlus.Location = new System.Drawing.Point(120, 57);
             this.txb_inductorNodeNPlus.Name = "txb_inductorNodeNPlus";
             this.txb_inductorNodeNPlus.Size = new System.Drawing.Size(100, 20);
             this.txb_inductorNodeNPlus.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             // txb_inductorNodeNMinus
             // 
-            this.txb_inductorNodeNMinus.Location = new System.Drawing.Point(102, 83);
+            this.txb_inductorNodeNMinus.Location = new System.Drawing.Point(120, 83);
             this.txb_inductorNodeNMinus.Name = "txb_inductorNodeNMinus";
             this.txb_inductorNodeNMinus.Size = new System.Drawing.Size(100, 20);
             this.txb_inductorNodeNMinus.TabIndex = 5;
@@ -104,13 +104,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Индуктивность";
+            this.label4.Text = "Индуктивность(Гн)";
             // 
             // txb_inductance
             // 
-            this.txb_inductance.Location = new System.Drawing.Point(102, 109);
+            this.txb_inductance.Location = new System.Drawing.Point(120, 106);
             this.txb_inductance.Name = "txb_inductance";
             this.txb_inductance.Size = new System.Drawing.Size(100, 20);
             this.txb_inductance.TabIndex = 7;

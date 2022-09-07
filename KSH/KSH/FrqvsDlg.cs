@@ -28,5 +28,12 @@ namespace KSH
             schemaDimensionForm.ShowDialog(this);
             schemaDimensionForm.Dispose();
         }
+
+        private void ID_RED_Click(object sender, EventArgs e)
+        {
+            EditingForm editingForm = new EditingForm();
+            editingForm.ShowDialog(this);
+            editingForm.Dispose();
+        }
     }
 }
