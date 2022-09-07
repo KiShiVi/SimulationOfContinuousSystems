@@ -23,12 +23,20 @@ namespace KSH
         public static int id_oper_boosters      = 0;
         public static int id_transformers       = 0;
 
-        public static int[,] resistorsN      = new int[resistors, 2];
-        public static float[] resistorsValue = new float[resistors];
+        public static int[,] resistorsN             = new int[resistors, 2];
+        public static float[] resistorsValue        = new float[resistors];
+        public static int[,] capacitorsN            = new int[resistors, 2];
+        public static float[] capacitorsValue       = new float[resistors];
+        public static int[,] inductorN              = new int[resistors, 2];
+        public static float[] inductorValue         = new float[resistors];
         public static void updateArrays()
         {
-            resistorsN      = new int[resistors, 2];
-            resistorsValue  = new float[resistors];
+            resistorsN          = new int[resistors, 2];
+            resistorsValue      = new float[resistors];
+            capacitorsN         = new int[capacitors, 2];
+            capacitorsValue     = new float[capacitors];
+            inductorN           = new int[inductances, 2];
+            inductorValue       = new float[inductances];
         }   
     }
 }

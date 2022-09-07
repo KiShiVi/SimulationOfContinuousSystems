@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapacitorPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapacitorPropertiesForm.Designer.cs">
+      <DependentUpon>CapacitorPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InductancePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InductancePropertiesForm.Designer.cs">
+      <DependentUpon>InductancePropertiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrqvsDlg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +79,12 @@
     <Compile Include="SchemaDimensionForm.Designer.cs">
       <DependentUpon>SchemaDimensionForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapacitorPropertiesForm.resx">
+      <DependentUpon>CapacitorPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InductancePropertiesForm.resx">
+      <DependentUpon>InductancePropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrqvsDlg.resx">
       <DependentUpon>FrqvsDlg.cs</DependentUpon>
     </EmbeddedResource>

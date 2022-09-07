@@ -43,6 +43,18 @@ namespace KSH
                 resistorPropertiesForm.Dispose();
             }
 
+            if (SchemaDimension.capacitors > 0)
+            {
+                CapacitorPropertiesForm capacitorsPropertiesForm = new CapacitorPropertiesForm();
+                capacitorsPropertiesForm.ShowDialog(this);
+                capacitorsPropertiesForm.Dispose();
+            }
+            if (SchemaDimension.inductances > 0)
+            {
+                InductancePropertiesForm inductancePropertiesForm = new InductancePropertiesForm();
+                inductancePropertiesForm.ShowDialog(this);
+                inductancePropertiesForm.Dispose();
+            }
         }
     }
 }
