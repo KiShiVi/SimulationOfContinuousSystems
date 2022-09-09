@@ -91,7 +91,6 @@ namespace KSH
                     label1.Show();
                     label2.Show();
                     label3.Show();
-                    //Спросить у Кирюхи про переименование label из другой формы.
                     break;
                 case 1:
                     for (int i = 0; i < SchemaDimension.capacitors; i++)
