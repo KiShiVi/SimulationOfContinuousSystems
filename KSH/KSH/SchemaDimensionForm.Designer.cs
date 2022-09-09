@@ -30,7 +30,6 @@ namespace KSH
         private void InitializeComponent()
         {
             this.btn_apply = new System.Windows.Forms.Button();
-            this.txb_countOfNodes = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txb_resistors = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@ namespace KSH
             this.txb_BP_transistors = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txb_INUT = new System.Windows.Forms.TextBox();
+            this.txb_countOfNodes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_apply
@@ -65,18 +65,10 @@ namespace KSH
             this.btn_apply.Location = new System.Drawing.Point(132, 217);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(254, 23);
-            this.btn_apply.TabIndex = 0;
+            this.btn_apply.TabIndex = 15;
             this.btn_apply.Text = "Принять";
             this.btn_apply.UseVisualStyleBackColor = true;
             this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
-            // 
-            // txb_countOfNodes
-            // 
-            this.txb_countOfNodes.Location = new System.Drawing.Point(12, 12);
-            this.txb_countOfNodes.Name = "txb_countOfNodes";
-            this.txb_countOfNodes.Size = new System.Drawing.Size(100, 20);
-            this.txb_countOfNodes.TabIndex = 1;
-            this.txb_countOfNodes.Text = "0";
             // 
             // label1
             // 
@@ -101,7 +93,7 @@ namespace KSH
             this.txb_resistors.Location = new System.Drawing.Point(12, 38);
             this.txb_resistors.Name = "txb_resistors";
             this.txb_resistors.Size = new System.Drawing.Size(100, 20);
-            this.txb_resistors.TabIndex = 3;
+            this.txb_resistors.TabIndex = 2;
             this.txb_resistors.Text = "0";
             // 
             // label3
@@ -118,7 +110,7 @@ namespace KSH
             this.txb_capacitors.Location = new System.Drawing.Point(12, 64);
             this.txb_capacitors.Name = "txb_capacitors";
             this.txb_capacitors.Size = new System.Drawing.Size(100, 20);
-            this.txb_capacitors.TabIndex = 5;
+            this.txb_capacitors.TabIndex = 3;
             this.txb_capacitors.Text = "0";
             // 
             // label4
@@ -135,7 +127,7 @@ namespace KSH
             this.txb_inductances.Location = new System.Drawing.Point(12, 90);
             this.txb_inductances.Name = "txb_inductances";
             this.txb_inductances.Size = new System.Drawing.Size(100, 20);
-            this.txb_inductances.TabIndex = 7;
+            this.txb_inductances.TabIndex = 4;
             this.txb_inductances.Text = "0";
             // 
             // label5
@@ -152,7 +144,7 @@ namespace KSH
             this.txb_ITUN.Location = new System.Drawing.Point(12, 116);
             this.txb_ITUN.Name = "txb_ITUN";
             this.txb_ITUN.Size = new System.Drawing.Size(100, 20);
-            this.txb_ITUN.TabIndex = 9;
+            this.txb_ITUN.TabIndex = 5;
             this.txb_ITUN.Text = "0";
             // 
             // label6
@@ -169,7 +161,7 @@ namespace KSH
             this.txb_INUN.Location = new System.Drawing.Point(12, 142);
             this.txb_INUN.Name = "txb_INUN";
             this.txb_INUN.Size = new System.Drawing.Size(100, 20);
-            this.txb_INUN.TabIndex = 11;
+            this.txb_INUN.TabIndex = 6;
             this.txb_INUN.Text = "0";
             // 
             // label7
@@ -186,7 +178,7 @@ namespace KSH
             this.txb_ITUT.Location = new System.Drawing.Point(12, 168);
             this.txb_ITUT.Name = "txb_ITUT";
             this.txb_ITUT.Size = new System.Drawing.Size(100, 20);
-            this.txb_ITUT.TabIndex = 13;
+            this.txb_ITUT.TabIndex = 7;
             this.txb_ITUT.Text = "0";
             // 
             // label8
@@ -203,7 +195,7 @@ namespace KSH
             this.txb_id_transformers.Location = new System.Drawing.Point(295, 168);
             this.txb_id_transformers.Name = "txb_id_transformers";
             this.txb_id_transformers.Size = new System.Drawing.Size(100, 20);
-            this.txb_id_transformers.TabIndex = 27;
+            this.txb_id_transformers.TabIndex = 14;
             this.txb_id_transformers.Text = "0";
             // 
             // label9
@@ -220,7 +212,7 @@ namespace KSH
             this.txb_id_oper_boosters.Location = new System.Drawing.Point(295, 142);
             this.txb_id_oper_boosters.Name = "txb_id_oper_boosters";
             this.txb_id_oper_boosters.Size = new System.Drawing.Size(100, 20);
-            this.txb_id_oper_boosters.TabIndex = 25;
+            this.txb_id_oper_boosters.TabIndex = 13;
             this.txb_id_oper_boosters.Text = "0";
             // 
             // label10
@@ -237,7 +229,7 @@ namespace KSH
             this.txb_transformers.Location = new System.Drawing.Point(295, 116);
             this.txb_transformers.Name = "txb_transformers";
             this.txb_transformers.Size = new System.Drawing.Size(100, 20);
-            this.txb_transformers.TabIndex = 23;
+            this.txb_transformers.TabIndex = 12;
             this.txb_transformers.Text = "0";
             // 
             // label11
@@ -254,7 +246,7 @@ namespace KSH
             this.txb_oper_boosters.Location = new System.Drawing.Point(295, 90);
             this.txb_oper_boosters.Name = "txb_oper_boosters";
             this.txb_oper_boosters.Size = new System.Drawing.Size(100, 20);
-            this.txb_oper_boosters.TabIndex = 21;
+            this.txb_oper_boosters.TabIndex = 11;
             this.txb_oper_boosters.Text = "0";
             // 
             // label12
@@ -271,7 +263,7 @@ namespace KSH
             this.txb_UP_transistors.Location = new System.Drawing.Point(295, 64);
             this.txb_UP_transistors.Name = "txb_UP_transistors";
             this.txb_UP_transistors.Size = new System.Drawing.Size(100, 20);
-            this.txb_UP_transistors.TabIndex = 19;
+            this.txb_UP_transistors.TabIndex = 10;
             this.txb_UP_transistors.Text = "0";
             // 
             // label13
@@ -288,7 +280,7 @@ namespace KSH
             this.txb_BP_transistors.Location = new System.Drawing.Point(295, 38);
             this.txb_BP_transistors.Name = "txb_BP_transistors";
             this.txb_BP_transistors.Size = new System.Drawing.Size(100, 20);
-            this.txb_BP_transistors.TabIndex = 17;
+            this.txb_BP_transistors.TabIndex = 9;
             this.txb_BP_transistors.Text = "0";
             // 
             // label14
@@ -305,14 +297,23 @@ namespace KSH
             this.txb_INUT.Location = new System.Drawing.Point(295, 12);
             this.txb_INUT.Name = "txb_INUT";
             this.txb_INUT.Size = new System.Drawing.Size(100, 20);
-            this.txb_INUT.TabIndex = 15;
+            this.txb_INUT.TabIndex = 8;
             this.txb_INUT.Text = "0";
+            // 
+            // txb_countOfNodes
+            // 
+            this.txb_countOfNodes.Location = new System.Drawing.Point(12, 12);
+            this.txb_countOfNodes.Name = "txb_countOfNodes";
+            this.txb_countOfNodes.Size = new System.Drawing.Size(100, 20);
+            this.txb_countOfNodes.TabIndex = 1;
+            this.txb_countOfNodes.Text = "0";
             // 
             // SchemaDimensionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 264);
+            this.Controls.Add(this.txb_countOfNodes);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txb_id_transformers);
             this.Controls.Add(this.label9);
@@ -340,10 +341,10 @@ namespace KSH
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txb_resistors);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txb_countOfNodes);
             this.Controls.Add(this.btn_apply);
             this.Name = "SchemaDimensionForm";
             this.Text = "Размерность схемы";
+            this.Load += new System.EventHandler(this.SchemaDimensionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,7 +353,6 @@ namespace KSH
         #endregion
 
         private System.Windows.Forms.Button btn_apply;
-        private System.Windows.Forms.TextBox txb_countOfNodes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txb_resistors;
@@ -380,5 +380,6 @@ namespace KSH
         private System.Windows.Forms.TextBox txb_BP_transistors;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txb_INUT;
+        private System.Windows.Forms.TextBox txb_countOfNodes;
     }
 }

@@ -7,18 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace KSH
 {
     public partial class SchemaDimensionForm : Form
     {
+        List<TextBox> listOfTextBoxes;
         public SchemaDimensionForm()
         {
             InitializeComponent();
         }
 
+        private void dropMessage(TextBox textBox)
+        {
+            MessageBox.Show("Неверно введены данные",
+                "Ошибка ввода данных",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            textBox.Focus();
+        }
+        private bool checkCorrectInputData(String text)
+        {
+            if (Regex.Match(text, @"^\d+$").Success)
+                return true;
+            return false;
+        }
         private void btn_apply_Click(object sender, EventArgs e)
         {
+            foreach(TextBox textBox in listOfTextBoxes)
+            {
+                if (!checkCorrectInputData(textBox.Text))
+                {
+                    dropMessage(textBox);
+                    return;
+                }
+            }
+
             SchemaDimension.countOfNodes        = Int32.Parse(txb_countOfNodes      .Text);
             SchemaDimension.resistors           = Int32.Parse(txb_resistors         .Text);
             SchemaDimension.capacitors          = Int32.Parse(txb_capacitors        .Text);
@@ -55,6 +80,24 @@ namespace KSH
                 inductancePropertiesForm.ShowDialog(this);
                 inductancePropertiesForm.Dispose();
             }
+        }
+
+        private void SchemaDimensionForm_Load(object sender, EventArgs e)
+        {
+            listOfTextBoxes = new List<TextBox> { txb_countOfNodes,
+                txb_resistors,
+                txb_capacitors,
+                txb_inductances,
+                txb_ITUN,
+                txb_INUN,
+                txb_ITUT, txb_INUT,
+                txb_BP_transistors,
+                txb_UP_transistors,
+                txb_oper_boosters,
+                txb_transformers,
+                txb_id_oper_boosters,
+                txb_id_transformers
+            };
         }
     }
 }
