@@ -78,7 +78,7 @@
             // 
             // txb_inductorNodeNPlus
             // 
-            this.txb_inductorNodeNPlus.Location = new System.Drawing.Point(120, 57);
+            this.txb_inductorNodeNPlus.Location = new System.Drawing.Point(120, 54);
             this.txb_inductorNodeNPlus.Name = "txb_inductorNodeNPlus";
             this.txb_inductorNodeNPlus.Size = new System.Drawing.Size(100, 20);
             this.txb_inductorNodeNPlus.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             // txb_inductorNodeNMinus
             // 
-            this.txb_inductorNodeNMinus.Location = new System.Drawing.Point(120, 83);
+            this.txb_inductorNodeNMinus.Location = new System.Drawing.Point(120, 80);
             this.txb_inductorNodeNMinus.Name = "txb_inductorNodeNMinus";
             this.txb_inductorNodeNMinus.Size = new System.Drawing.Size(100, 20);
             this.txb_inductorNodeNMinus.TabIndex = 5;
