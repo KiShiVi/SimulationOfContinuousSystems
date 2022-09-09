@@ -13,6 +13,8 @@ namespace KSH
 {
     public partial class EditingForm : Form
     {
+        List<Label> labelList;
+        List<TextBox> textBoxList;
         public EditingForm()
         {
             InitializeComponent();
@@ -52,26 +54,29 @@ namespace KSH
 
         private void hideAllTextBox()
         {
-            label1.Hide();
-            label2.Hide();
-            label5.Hide();
-            label3.Hide();
-            label4.Hide();
-            label6.Hide();
-            label7.Hide();
-            label8.Hide();
-            label9.Hide();
-            label10.Hide();
-            txb_value1.Hide();
-            txb_value2.Hide();
-            txb_value3.Hide();
-            txb_value4.Hide();
-            txb_value5.Hide();
-            txb_value6.Hide();
-            txb_value7.Hide();
-            txb_value8.Hide();
-            txb_value9.Hide();
-            txb_value10.Hide();
+            for (int i = 0; i < labelList.Count; ++i)
+            {
+                labelList[i].Hide();
+                textBoxList[i].Clear();
+                textBoxList[i].Hide();
+            }
+        }
+
+        private void showNParameters(int n)
+        {
+            if (n >= labelList.Count)
+                throw new IndexOutOfRangeException("showNParameters(int n) error");
+            for (int i = 0; i < n; ++i)
+            {
+                labelList[i].Show();
+                textBoxList[i].Show();
+            }
+        }
+
+        private void fillParameterLabels(List<String> nameList)
+        {
+            for (int i = 0; i < nameList.Count; ++i)
+                labelList[i].Text = nameList[i];
         }
 
         private void typesOfComponents_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,36 +90,24 @@ namespace KSH
                     {
                         cmb_componentNumber.Items.Add((i + 1).ToString());
                     }
-                    txb_value1.Show();
-                    txb_value2.Show();
-                    txb_value3.Show();
-                    label1.Show();
-                    label2.Show();
-                    label3.Show();
+                    showNParameters(3);
+                    fillParameterLabels(SchemaDimension.resistorParameters);
                     break;
                 case 1:
                     for (int i = 0; i < SchemaDimension.capacitors; i++)
                     {
                         cmb_componentNumber.Items.Add((i + 1).ToString());
                     }
-                    txb_value1.Show();
-                    txb_value2.Show();
-                    txb_value3.Show();
-                    label1.Show();
-                    label2.Show();
-                    label3.Show();
+                    showNParameters(3);
+                    fillParameterLabels(SchemaDimension.capacitorParameters);
                     break;
                 case 2:
                     for (int i = 0; i < SchemaDimension.inductances; i++)
                     {
                         cmb_componentNumber.Items.Add((i + 1).ToString());
                     }
-                    txb_value1.Show();
-                    txb_value2.Show();
-                    txb_value3.Show();
-                    label1.Show();
-                    label2.Show();
-                    label3.Show();
+                    showNParameters(3);
+                    fillParameterLabels(SchemaDimension.inductanceParameters);
                     break;
 
             }
@@ -128,10 +121,36 @@ namespace KSH
 
         private void EditingForm_Load(object sender, EventArgs e)
         {
+            labelList = new List<Label>
+            {
+                label1,
+                label2,
+                label3,
+                label4,
+                label5,
+                label6,
+                label7,
+                label8,
+                label9,
+                label10,
+            };
+            textBoxList = new List<TextBox>
+            {
+                txb_value1,
+                txb_value2,
+                txb_value3,
+                txb_value4,
+                txb_value5,
+                txb_value6,
+                txb_value7,
+                txb_value8,
+                txb_value9,
+                txb_value10,
+            };
             hideAllTextBox();
         }
 
-        private void btn_descriptionOutput_Click(object sender, EventArgs e)
+        private void cmb_componentNumber_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_typesOfComponents.SelectedIndex == -1)
             {
@@ -211,6 +230,10 @@ namespace KSH
                     break;
 
             }
+            MessageBox.Show("Данные успешно сохранены",
+                "Успех!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }

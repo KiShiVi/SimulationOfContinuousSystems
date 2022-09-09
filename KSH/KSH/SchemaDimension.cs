@@ -8,6 +8,10 @@ namespace KSH
 {
     class SchemaDimension
     {
+        public static List<String> resistorParameters   = new List<String> { "n+", "n-", "Сопротивление (КОм)" };
+        public static List<String> capacitorParameters  = new List<String> { "n+", "n-", "Емкость(Ф)" };
+        public static List<String> inductanceParameters = new List<String> { "n+", "n-", "Индуктивность(Гн)" };
+
         public static int countOfNodes          = 0;
         public static int resistors             = 0;
         public static int capacitors            = 0;
