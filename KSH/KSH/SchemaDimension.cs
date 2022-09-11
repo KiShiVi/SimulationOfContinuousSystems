@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KSH
 {
@@ -44,9 +45,78 @@ namespace KSH
             inductorN           = new int[inductances, 2];
             inductorValue       = new float[inductances];
         }   
-        public static void fillParametersFromFile(FileStream file)
+        public static void fillParametersFromFile(String file)
         {
-            file
+            if (File.Exists(Directory.GetCurrentDirectory()     + '\\' + file + ".txt"))
+                File.Delete(Directory.GetCurrentDirectory()     + '\\' + file + ".txt");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", countOfNodes    .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", resistors       .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", capacitors      .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", inductances     .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", ITUN            .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", INUN            .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", ITUT            .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", INUT            .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", BP_transistors  .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", UP_transistors  .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", oper_boosters   .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", transformers    .ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", id_oper_boosters.ToString() + "\n");
+            File.AppendAllText(Directory.GetCurrentDirectory()  + '\\' + file + ".txt", id_transformers .ToString() + "\n");
+
+            for(int value = 0; value < resistors; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", resistorsN[value, 0].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            for (int value = 0; value < resistors; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", resistorsN[value, 1].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            foreach (float value in resistorsValue)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", value.ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+
+
+            for (int value = 0; value < capacitors; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", capacitorsN[value, 0].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            for (int value = 0; value < capacitors; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", capacitorsN[value, 1].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            foreach (float value in capacitorsValue)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", value.ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+
+
+            for (int value = 0; value < inductances; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", inductorN[value, 0].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            for (int value = 0; value < inductances; ++value)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", inductorN[value, 1].ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            foreach (float value in inductorValue)
+                File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", value.ToString() + " ");
+
+            File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
+
+            String[] aaaa = File.ReadAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt").Split('\n');
+            //countOfNodes = Int32.Parse(aaaa[0]);
+            float a = float.Parse(aaaa[14].Split(' ')[0]);
+            MessageBox.Show(a.ToString());
         }
     }
 }

@@ -23,12 +23,12 @@ namespace KSH
 
         private void btn_enterFileName_Click(object sender, EventArgs e)
         {
-            FileStream file ;
+            //FileStream file ;
             switch (this.isWriting) {
                 case true:
-                    file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Create);
-                    
-                    file.Close();
+                    //file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Create);
+                    SchemaDimension.fillParametersFromFile(txb_fileName.Text);
+                    //file.Close();
                     break;
                 case false:
                     if(!Directory.Exists(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt"))
@@ -39,8 +39,8 @@ namespace KSH
                             MessageBoxIcon.Error);
                         return;
                     }
-                    file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Open);
-                    file.Close();
+                    //file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Open);
+                    //file.Close();
                     break;
             }
             this.Close();
