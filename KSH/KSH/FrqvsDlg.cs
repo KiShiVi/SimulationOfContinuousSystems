@@ -35,5 +35,12 @@ namespace KSH
             editingForm.ShowDialog(this);
             editingForm.Dispose();
         }
+
+        private void ID_FILE_Click(object sender, EventArgs e)
+        {
+            ComponentDescriptions componentDescriptions = new ComponentDescriptions(false);
+            componentDescriptions.ShowDialog(this);
+            componentDescriptions.Dispose();
+        }
     }
 }

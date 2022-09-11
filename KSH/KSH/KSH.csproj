@@ -58,6 +58,12 @@
     <Compile Include="EditingForm.Designer.cs">
       <DependentUpon>EditingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentDescriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentDescriptions.Designer.cs">
+      <DependentUpon>ComponentDescriptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="InductancePropertiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditingForm.resx">
       <DependentUpon>EditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentDescriptions.resx">
+      <DependentUpon>ComponentDescriptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InductancePropertiesForm.resx">
       <DependentUpon>InductancePropertiesForm.cs</DependentUpon>

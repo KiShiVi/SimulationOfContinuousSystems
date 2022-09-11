@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace KSH
         public static float[] capacitorsValue       = new float[resistors];
         public static int[,] inductorN              = new int[resistors, 2];
         public static float[] inductorValue         = new float[resistors];
+
         public static void updateArrays()
         {
             resistorsN          = new int[resistors, 2];
@@ -42,5 +44,9 @@ namespace KSH
             inductorN           = new int[inductances, 2];
             inductorValue       = new float[inductances];
         }   
+        public static void fillParametersFromFile(FileStream file)
+        {
+            file
+        }
     }
 }

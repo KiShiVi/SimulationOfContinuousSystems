@@ -19,6 +19,21 @@ namespace KSH
             InitializeComponent();
         }
 
+        private void dropDialog()
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы хотите сохранить характеристики схемы в файл?",
+                 "Вывод данных",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ComponentDescriptions componentDescriptions = new ComponentDescriptions(true);
+                componentDescriptions.ShowDialog();
+                componentDescriptions.Dispose();
+            }
+                
+        }
+
         private void dropMessage(TextBox textBox)
         {
             MessageBox.Show("Неверно введены данные",
@@ -35,7 +50,7 @@ namespace KSH
         }
         private void btn_apply_Click(object sender, EventArgs e)
         {
-            foreach(TextBox textBox in listOfTextBoxes)
+            foreach (TextBox textBox in listOfTextBoxes)
             {
                 if (!checkCorrectInputData(textBox.Text))
                 {
@@ -80,6 +95,9 @@ namespace KSH
                 inductancePropertiesForm.ShowDialog(this);
                 inductancePropertiesForm.Dispose();
             }
+
+            dropDialog();
+
         }
 
         private void SchemaDimensionForm_Load(object sender, EventArgs e)
