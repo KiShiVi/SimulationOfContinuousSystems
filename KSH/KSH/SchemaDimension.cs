@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace KSH
 {
@@ -113,10 +112,15 @@ namespace KSH
 
             File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
 
-            String[] aaaa = File.ReadAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt").Split('\n');
-            //countOfNodes = Int32.Parse(aaaa[0]);
-            float a = float.Parse(aaaa[14].Split(' ')[0]);
-            MessageBox.Show(a.ToString());
+            //String[] aaaa = File.ReadAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt").Split('\n');
+            //float a = float.Parse(aaaa[14].Split(' ')[0]);
+
+            //int i = 0;
+            //foreach(String value in aaaa[14].Split(' '))
+            //{
+            //    resistorsN[i, 0] = Int32.Parse(value);
+            //    ++i;
+            //}
         }
     }
 }
