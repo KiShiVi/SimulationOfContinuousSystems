@@ -39,6 +39,7 @@ namespace KSH
                             MessageBoxIcon.Error);
                         return;
                     }
+                    SchemaDimension.fillParametersToFile(txb_fileName.Text);
                     //file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Open);
                     //file.Close();
                     break;
