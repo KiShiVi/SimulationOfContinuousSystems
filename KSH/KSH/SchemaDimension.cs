@@ -44,7 +44,7 @@ namespace KSH
             inductorN           = new int[inductances, 2];
             inductorValue       = new float[inductances];
         }
-        public static void fillParametersFromFile(String file)
+        public static void fillParametersToFile(String file)
         {
             if (File.Exists(Directory.GetCurrentDirectory() + '\\' + file + ".txt"))
                 File.Delete(Directory.GetCurrentDirectory() + '\\' + file + ".txt");
@@ -112,7 +112,7 @@ namespace KSH
 
             File.AppendAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt", "\n");
         }
-        public static void fillParametersToFile(String file) {
+        public static void fillParametersFromFile(String file) {
             String[] textFromFile = File.ReadAllText(Directory.GetCurrentDirectory() + '\\' + file + ".txt").Split('\n');
             countOfNodes = Int32.Parse(textFromFile[0]);
             resistors = Int32.Parse(textFromFile[1]);
@@ -128,6 +128,9 @@ namespace KSH
             transformers = Int32.Parse(textFromFile[11]);
             id_oper_boosters = Int32.Parse(textFromFile[12]);
             id_transformers = Int32.Parse(textFromFile[13].Split(' ')[0]);
+
+            SchemaDimension.updateArrays();
+
             int n = 14;
             if (resistors != 0)
             {
@@ -140,7 +143,7 @@ namespace KSH
                 n += 3;
             }
 
-            if (resistors != 0)
+            if (capacitors != 0)
             {
                 for (int i = 0; i < capacitors; i++)
                 {
@@ -151,7 +154,7 @@ namespace KSH
                 n += 3;
             }
 
-            if (resistors != 0)
+            if (inductances != 0)
             {
                 for (int i = 0; i < inductances; i++)
                 {

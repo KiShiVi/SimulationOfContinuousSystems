@@ -27,19 +27,19 @@ namespace KSH
             switch (this.isWriting) {
                 case true:
                     //file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Create);
-                    SchemaDimension.fillParametersFromFile(txb_fileName.Text);
+                    SchemaDimension.fillParametersToFile(txb_fileName.Text);
                     //file.Close();
                     break;
                 case false:
-                    if(!Directory.Exists(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt"))
+                    if(!File.Exists(Directory.GetCurrentDirectory() + "\\" + txb_fileName.Text + ".txt"))
                     {
-                        MessageBox.Show("Файла по данному пути не существует",
+                        MessageBox.Show("Файла по данному пути не существует\n" + Directory.GetCurrentDirectory() + "\\" + txb_fileName.Text + ".txt",
                             "Ошибка",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
                         return;
                     }
-                    SchemaDimension.fillParametersToFile(txb_fileName.Text);
+                    SchemaDimension.fillParametersFromFile(txb_fileName.Text);
                     //file = new FileStream(Directory.GetCurrentDirectory() + txb_fileName.Text + ".txt", FileMode.Open);
                     //file.Close();
                     break;

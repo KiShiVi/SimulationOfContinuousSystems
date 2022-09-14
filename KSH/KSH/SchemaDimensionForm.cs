@@ -58,7 +58,6 @@ namespace KSH
                     return;
                 }
             }
-
             SchemaDimension.countOfNodes        = Int32.Parse(txb_countOfNodes      .Text);
             SchemaDimension.resistors           = Int32.Parse(txb_resistors         .Text);
             SchemaDimension.capacitors          = Int32.Parse(txb_capacitors        .Text);
