@@ -28,12 +28,21 @@ namespace KSH
         public static int id_oper_boosters      = 0;
         public static int id_transformers       = 0;
 
+        public static int numberOfFrequencies   = 0;
+
+        public static int lPluse                = 0;
+        public static int lMinus                = 0;
+        public static int kPluse                = 0;
+        public static int kMinus                = 0;
+
         public static int[,] resistorsN             = new int[resistors, 2];
         public static float[] resistorsValue        = new float[resistors];
         public static int[,] capacitorsN            = new int[resistors, 2];
         public static float[] capacitorsValue       = new float[resistors];
         public static int[,] inductorN              = new int[resistors, 2];
         public static float[] inductorValue         = new float[resistors];
+
+        public static float[] frequencies           = new float[numberOfFrequencies];
 
         public static void updateArrays()
         {
@@ -43,6 +52,7 @@ namespace KSH
             capacitorsValue     = new float[capacitors];
             inductorN           = new int[inductances, 2];
             inductorValue       = new float[inductances];
+            frequencies         = new float[numberOfFrequencies];
         }
         public static void fillParametersToFile(String file)
         {

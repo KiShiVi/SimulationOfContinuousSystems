@@ -24,9 +24,12 @@ namespace KSH
 
         private void ID_CONS_Click(object sender, EventArgs e)
         {
+            InputAndOutputNodes inputAndOutputNodes = new InputAndOutputNodes();
             SchemaDimensionForm schemaDimensionForm = new SchemaDimensionForm();
             schemaDimensionForm.ShowDialog(this);
             schemaDimensionForm.Dispose();
+            inputAndOutputNodes.ShowDialog(this);
+            inputAndOutputNodes.Dispose();
         }
 
         private void ID_RED_Click(object sender, EventArgs e)
@@ -38,9 +41,29 @@ namespace KSH
 
         private void ID_FILE_Click(object sender, EventArgs e)
         {
+            InputAndOutputNodes inputAndOutputNodes = new InputAndOutputNodes();
             ComponentDescriptions componentDescriptions = new ComponentDescriptions(false);
             componentDescriptions.ShowDialog(this);
             componentDescriptions.Dispose();
+            inputAndOutputNodes.ShowDialog(this);
+            inputAndOutputNodes.Dispose();
+        }
+
+        private void ID_F_Click(object sender, EventArgs e)
+        {
+            TypeOfPartialCharacteristic typeOfPartialCharacteristic = new TypeOfPartialCharacteristic();
+            InputAndOutputNodes inputAndOutputNodes = new InputAndOutputNodes();
+            typeOfPartialCharacteristic.ShowDialog(this);
+            typeOfPartialCharacteristic.Dispose();
+            inputAndOutputNodes.ShowDialog(this);
+            inputAndOutputNodes.Dispose();
+        }
+
+        private void ID_IO_Click(object sender, EventArgs e)
+        {
+            InputAndOutputNodes inputAndOutputNodes = new InputAndOutputNodes();
+            inputAndOutputNodes.ShowDialog(this);
+            inputAndOutputNodes.Dispose();
         }
     }
 }

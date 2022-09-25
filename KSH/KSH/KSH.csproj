@@ -64,6 +64,18 @@
     <Compile Include="ComponentDescriptions.Designer.cs">
       <DependentUpon>ComponentDescriptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputAndOutputNodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputAndOutputNodes.Designer.cs">
+      <DependentUpon>InputAndOutputNodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfPartialCharacteristic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfPartialCharacteristic.Designer.cs">
+      <DependentUpon>TypeOfPartialCharacteristic.cs</DependentUpon>
+    </Compile>
     <Compile Include="InductancePropertiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentDescriptions.resx">
       <DependentUpon>ComponentDescriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputAndOutputNodes.resx">
+      <DependentUpon>InputAndOutputNodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeOfPartialCharacteristic.resx">
+      <DependentUpon>TypeOfPartialCharacteristic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InductancePropertiesForm.resx">
       <DependentUpon>InductancePropertiesForm.cs</DependentUpon>
