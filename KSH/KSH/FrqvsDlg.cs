@@ -65,5 +65,12 @@ namespace KSH
             inputAndOutputNodes.ShowDialog(this);
             inputAndOutputNodes.Dispose();
         }
+
+        private void ID_INTERNET_Click(object sender, EventArgs e)
+        {
+            BuiltInBrowser builtInBrowser = new BuiltInBrowser();
+            builtInBrowser.ShowDialog(this);
+            builtInBrowser.Dispose();
+        }
     }
 }

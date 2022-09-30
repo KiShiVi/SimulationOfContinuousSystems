@@ -64,6 +64,12 @@
     <Compile Include="ComponentDescriptions.Designer.cs">
       <DependentUpon>ComponentDescriptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuiltInBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuiltInBrowser.Designer.cs">
+      <DependentUpon>BuiltInBrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputAndOutputNodes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentDescriptions.resx">
       <DependentUpon>ComponentDescriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuiltInBrowser.resx">
+      <DependentUpon>BuiltInBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputAndOutputNodes.resx">
       <DependentUpon>InputAndOutputNodes.cs</DependentUpon>
