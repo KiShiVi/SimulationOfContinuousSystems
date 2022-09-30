@@ -129,7 +129,7 @@
             this.prb_progress.Size = new System.Drawing.Size(695, 23);
             this.prb_progress.TabIndex = 8;
             // 
-            // Form1
+            // BuiltInBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,8 +143,8 @@
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_enter);
             this.Controls.Add(this.wbr_internet);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "BuiltInBrowser";
+            this.Text = "Веб-браузер";
             this.ResumeLayout(false);
             this.PerformLayout();
 
